@@ -40,6 +40,15 @@
         >
             <a class="nav-link" href="{% url 'posts' %}">لیست  پست ها</a>
             </li>
+        <li 
+            {% if "comments" in request.path %}
+                class="nav-item active mr-3"
+            {% else %}
+                class="nav-item mr-3"
+            {% endif %}
+        >
+            <a class="nav-link" href="{% url 'comments' %}">لیست  نظرات</a>
+            </li>
         </ul>
         <div class="mr-auto">
         <form action="">
